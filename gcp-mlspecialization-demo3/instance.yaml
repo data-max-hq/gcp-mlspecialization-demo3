@@ -1,0 +1,45 @@
+type: object
+required:
+- TripSeconds
+- TripMiles
+- PickupCommunityArea
+- DropoffCommunityArea
+- TripStartTimestamp
+- TripEndTimestamp
+- PaymentType
+- Company
+properties:
+  TripSeconds:
+    type: string
+    nullable: true
+  TripMiles:
+    type: string
+    nullable: true
+  PickupCommunityArea:
+    type: string
+    nullable: true
+  DropoffCommunityArea:
+    type: string
+    nullable: true
+  TripStartTimestamp:
+    type: string
+    nullable: true
+  TripEndTimestamp:
+    type: string
+    nullable: true
+  PaymentType:
+    type: string
+    nullable: true
+  Company:
+    type: string
+    nullable: true
+nullable: true
+example:
+  TripSeconds: '985.0'
+  TripMiles: '3.82'
+  PickupCommunityArea: '8.0'
+  DropoffCommunityArea: '8.0'
+  TripStartTimestamp: '2024-03-26T12:30:00'
+  TripEndTimestamp: '2024-03-26T12:45:00'
+  PaymentType: Credit Card
+  Company: Flash Cab
