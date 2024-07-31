@@ -1,1 +1,49 @@
-[{"categorical":{"columnName":"taxi_id"}},{"timestamp":{"columnName":"trip_start_timestamp"}},{"numeric":{"columnName":"trip_miles","invalidValuesAllowed":true}},{"numeric":{"columnName":"pickup_census_tract","invalidValuesAllowed":true}},{"numeric":{"columnName":"dropoff_census_tract","invalidValuesAllowed":true}},{"numeric":{"columnName":"pickup_community_area","invalidValuesAllowed":true}},{"numeric":{"columnName":"dropoff_community_area","invalidValuesAllowed":true}},{"numeric":{"columnName":"tolls","invalidValuesAllowed":true}},{"numeric":{"columnName":"extras","invalidValuesAllowed":true}},{"text":{"columnName":"company"}},{"numeric":{"columnName":"pickup_latitude","invalidValuesAllowed":true}},{"numeric":{"columnName":"pickup_longitude","invalidValuesAllowed":true}},{"text":{"columnName":"pickup_location"}},{"numeric":{"columnName":"dropoff_latitude","invalidValuesAllowed":true}},{"numeric":{"columnName":"dropoff_longitude","invalidValuesAllowed":true}},{"text":{"columnName":"dropoff_location"}}]
+[
+    {
+        "numeric": {
+            "columnName": "trip_miles",
+            "invalidValuesAllowed": true
+        }
+    },
+    {
+        "numeric": {
+            "columnName": "pickup_community_area",
+            "invalidValuesAllowed": true
+        }
+    },
+    {
+        "numeric": {
+            "columnName": "dropoff_community_area",
+            "invalidValuesAllowed": true
+        }
+    },
+    {
+        "numeric": {
+            "columnName": "tolls",
+            "invalidValuesAllowed": true
+        }
+    },
+    {
+        "numeric": {
+            "columnName": "extras",
+            "invalidValuesAllowed": true
+        }
+    },
+    {
+        "text": {
+            "columnName": "company"
+        }
+    },
+    {
+        "numeric": {
+            "columnName": "pickup_longitude",
+            "invalidValuesAllowed": true
+        }
+    },
+    {
+        "numeric": {
+            "columnName": "dropoff_latitude",
+            "invalidValuesAllowed": true
+        }
+    }
+]

@@ -39,8 +39,23 @@ The insights gained from data exploration significantly influenced our modeling 
 1. ***Data Preprocessing***: Based on the data exploration findings, we determined the appropriate preprocessing steps for each feature. For example, we decided to normalize the fare amounts due to their wide range and to apply one-hot encoding to categorical features like day of the week.
 
 
+2. ***Feature Selection***: The feature importance analysis revealed that some features had little correlation with the fare amount. Additionally, other features that can not be available in real-time predictions, were excluded from the model. This careful selection ensured that the model was trained only on relevant and available features. 
 
-2. ***Feature Selection***: The feature importance analysis revealed that some features, such as payment_method, had little correlation with the fare amount. Additionally, features like trip_seconds, tip, and trip_end_timestamp, which are not available in real-time predictions, were excluded from the model. This careful selection ensured that the model was trained only on relevant and available features.
+    The following features were excluded due to having little or no importance on the label feature prediction: 
+    - payment_method
+    - trip_start_timestamp
+    - pickup_latitude
+    - pickup_location
+    - dropoff_location
+    - taxi_id
+    - pickup_census_tract
+    - dropoff_latitude
+    - dropoff_census_tract
+
+    The following features were excluded because they can not be available in prediction time: 
+    - trip_seconds
+    - tip
+     - trip_end_timestamp
 
 3. ***Model Selection***: The nature of the dataset and the requirement to predict a continuous value (fare amount) led us to choose a tabular regression model within AutoML. This model type was best suited for handling the structured data and delivering accurate fare predictions.
 

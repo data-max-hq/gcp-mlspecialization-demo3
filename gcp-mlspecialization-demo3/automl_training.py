@@ -25,22 +25,12 @@ storage_client = storage.Client()
 
 # Get the bucket object
 bucket = storage_client.bucket(gcs_bucket)
+
 # Create a new blob and upload the file's content.
 blob = bucket.blob(transformations_file)
 blob.upload_from_filename(source_file_path)
 
-
-# # Define the dataset
-
-# dataset = aiplatform.TabularDataset.create(
-#     display_name=vertexai_dataset_name,
-#     bq_source=f'bq://{project_id}.{dataset_id}.{table_id}')
-
-
-# # Define the target column (the column you want to predict)
 target_column = 'fare'
-
-
 
 PipelineJob = aiplatform.PipelineJob(
     display_name = 'pipeline-job',
@@ -60,7 +50,7 @@ PipelineJob = aiplatform.PipelineJob(
         "training_fraction": 0.8,
         "validation_fraction": 0.1,
         "test_fraction": 0.1,
-        "train_budget_milli_node_hours" : 1000,
+        "train_budget_milli_node_hours" : 3000,
         "model_display_name" : model_display_name,
         "run_evaluation" : True   
     }
@@ -70,27 +60,3 @@ PipelineJob = aiplatform.PipelineJob(
 PipelineJob.submit()
 
 
-
-
-# # Create the model
-# model_display_name = model_display_name
-
-# job = aiplatform.training_jobs.AutoMLTabularTrainingJob(
-#         display_name=model_display_name,
-#         optimization_prediction_type='regression',
-#         optimization_objective=optimization_objective,
-#         column_specs=column_specs)
-
-
-# # run the job
-# model = job.run(
-#     dataset=dataset,
-#     target_column=target_column,
-#     training_fraction_split = 0.8,
-#     validation_fraction_split = 0.1,
-#     test_fraction_split = 0.1,
-#     budget_milli_node_hours=3000,
-#     model_display_name=model_display_name
-# )
-        
-# print(f'Model training started')
