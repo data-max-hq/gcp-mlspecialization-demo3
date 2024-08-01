@@ -1,33 +1,24 @@
 [
     {
         "numeric": {
-            "columnName": "trip_miles",
-            "invalidValuesAllowed": true
+            "columnName": "trip_miles"
         }
     },
     {
-        "numeric": {
-            "columnName": "pickup_community_area",
-            "invalidValuesAllowed": true
-        }
+        "categorical": {
+            "columnName": "pickup_community_area"        }
+    },
+    {
+        "categorical": {
+            "columnName": "dropoff_community_area"        }
     },
     {
         "numeric": {
-            "columnName": "dropoff_community_area",
-            "invalidValuesAllowed": true
-        }
+            "columnName": "tolls"        }
     },
     {
         "numeric": {
-            "columnName": "tolls",
-            "invalidValuesAllowed": true
-        }
-    },
-    {
-        "numeric": {
-            "columnName": "extras",
-            "invalidValuesAllowed": true
-        }
+            "columnName": "extras"        }
     },
     {
         "text": {
@@ -36,14 +27,10 @@
     },
     {
         "numeric": {
-            "columnName": "pickup_longitude",
-            "invalidValuesAllowed": true
-        }
+            "columnName": "pickup_longitude"        }
     },
     {
         "numeric": {
-            "columnName": "dropoff_latitude",
-            "invalidValuesAllowed": true
-        }
+            "columnName": "dropoff_latitude"        }
     }
 ]

@@ -35,7 +35,7 @@ target_column = 'fare'
 PipelineJob = aiplatform.PipelineJob(
     display_name = 'pipeline-job',
     template_path = 'https://us-kfp.pkg.dev/ml-pipeline/google-cloud-registry/automl-tabular/sha256:8670157cf7c37d7001d44a3816fb234be7acc6d9c1e6b7c4d55ef24ff7c0410d',
-    
+    enable_caching = False,
     project = project_id,
     location = region,
     parameter_values = {
@@ -52,7 +52,9 @@ PipelineJob = aiplatform.PipelineJob(
         "test_fraction": 0.1,
         "train_budget_milli_node_hours" : 3000,
         "model_display_name" : model_display_name,
-        "run_evaluation" : True   
+        "run_evaluation" : True,
+        "optimization_objective_precision_value" : -1,
+        "optimization_objective_recall_value": -1
     }
 )
 
