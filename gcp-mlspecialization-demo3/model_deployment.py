@@ -1,6 +1,7 @@
-from google.cloud import aiplatform
 import os
+
 import dotenv
+from google.cloud import aiplatform
 
 # Load the environment variables
 dotenv.load_dotenv()
@@ -13,19 +14,15 @@ ENDPOINT_NAME = os.getenv("VERTEXAI_ENDPOINT_NAME")
 
 aiplatform.init(project=PROJECT_ID, location=REGION)
 
-# Retrieve the model from the registry
-# model_name = f"projects/{PROJECT_ID}/locations/{REGION}/models/3730925527532306432"
-# model = aiplatform.Model(model_name=model_name)
-
 # List models and find the one with the display name
-models = aiplatform.Model.list(filter=f'display_name={MODEL_NAME}')
+models = aiplatform.Model.list(filter=f"display_name={MODEL_NAME}")
 
 # Check if the model exists and get the model ID
 if models:
     model = models[0]
     model_id = model.name
 else:
-    raise Exception(f"Model with display name {MODEL_NAME} not found.")    
+    raise Exception(f"Model with display name {MODEL_NAME} not found.")
 
 # Create or retrieve an endpoint
 endpoint = aiplatform.Endpoint.create(display_name=ENDPOINT_NAME)

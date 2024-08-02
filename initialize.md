@@ -23,7 +23,7 @@ Run the automl_training.py script to initialize and run the automl pipeline with
 python gcp-mlspecialization-demo3/automl_training.py
 ```
 
-4. Deploy the model 
+4. Deploy the model
 
 Run the model_deployment.py script to deploy the registered model in a vertex ai enpoint
 

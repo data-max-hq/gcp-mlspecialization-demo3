@@ -1,13 +1,14 @@
-from google.cloud import bigquery
 import os
+
 import dotenv
+from google.cloud import bigquery
 
 # Load the environment variables
 dotenv.load_dotenv()
 
-project_id = os.getenv('GCP_PROJECT_ID')
-dataset_id = os.getenv('BQ_DATASET_ID')
-table_id = os.getenv('BQ_TABLE_ID')
+project_id = os.getenv("GCP_PROJECT_ID")
+dataset_id = os.getenv("BQ_DATASET_ID")
+table_id = os.getenv("BQ_TABLE_ID")
 
 
 # Initialize the BigQuery client
@@ -27,5 +28,3 @@ query_job = client.query(query)
 query_job.result()
 
 print("Table created or replaced successfully.")
-
-

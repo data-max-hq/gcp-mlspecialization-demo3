@@ -1,36 +1,42 @@
 [
-    {
-        "numeric": {
-            "columnName": "trip_miles"
-        }
-    },
-    {
-        "categorical": {
-            "columnName": "pickup_community_area"        }
-    },
-    {
-        "categorical": {
-            "columnName": "dropoff_community_area"        }
-    },
-    {
-        "numeric": {
-            "columnName": "tolls"        }
-    },
-    {
-        "numeric": {
-            "columnName": "extras"        }
-    },
-    {
-        "text": {
-            "columnName": "company"
-        }
-    },
-    {
-        "numeric": {
-            "columnName": "pickup_longitude"        }
-    },
-    {
-        "numeric": {
-            "columnName": "dropoff_latitude"        }
+  {
+    "numeric": {
+      "columnName": "trip_miles"
     }
+  },
+  {
+    "categorical": {
+      "columnName": "pickup_community_area"
+    }
+  },
+  {
+    "categorical": {
+      "columnName": "dropoff_community_area"
+    }
+  },
+  {
+    "numeric": {
+      "columnName": "tolls"
+    }
+  },
+  {
+    "numeric": {
+      "columnName": "extras"
+    }
+  },
+  {
+    "text": {
+      "columnName": "company"
+    }
+  },
+  {
+    "numeric": {
+      "columnName": "pickup_longitude"
+    }
+  },
+  {
+    "numeric": {
+      "columnName": "dropoff_latitude"
+    }
+  }
 ]
