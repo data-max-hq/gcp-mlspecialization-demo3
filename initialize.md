@@ -14,6 +14,7 @@ This guide will help you initialize and run the AutoML training pipeline for Dem
    Clone the `gcp-mlspecialization-demo3` repository:
    ```bash
    git clone https://github.com/data-max-hq/gcp-mlspecialization-demo3
+   cd gcp-mlspecialization-demo3
    ```
 
 3. **Install Requirements**  
