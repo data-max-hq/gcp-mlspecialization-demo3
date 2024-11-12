@@ -7,7 +7,7 @@ This guide will help you initialize and run the AutoML training pipeline for Dem
 1. **Install Git**  
    Install Git if it's not already available on your system:
    ```bash
-   apt install git
+   sudo apt install -y git
    ```
 
 2. **Clone the Repository**  
