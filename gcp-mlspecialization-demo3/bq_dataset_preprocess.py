@@ -6,9 +6,9 @@ from google.cloud import bigquery
 # Load the environment variables
 dotenv.load_dotenv()
 
-project_id = os.getenv("GCP_PROJECT_ID")
-dataset_id = os.getenv("BQ_DATASET_ID")
-table_id = os.getenv("BQ_TABLE_ID")
+project_id = os.getenv("GOOGLE_CLOUD_PROJECT")
+dataset_id = os.getenv("BIGQUERY_DATASET_NAME")
+table_id = os.getenv("BIGQUERY_TABLE_NAME")
 
 
 # Initialize the BigQuery client
