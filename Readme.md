@@ -139,12 +139,6 @@ The primary evaluation metric used was the Root Mean Squared Error (RMSE), which
 ### Evaluation Results
 The model was tested on the independent dataset, and the following results were observed:
 
-- RMSE: 38.099
-- MAE: 2.692
-- MAPE: 13,413,031
-- RMSLE: 0.321
-- r-squared: 0.348
-
 The code for retrieving the results of the model evaluation is in `gcp-mlspecialization-demo3/model_evaluation.py`.
 
 ### Conclusion
