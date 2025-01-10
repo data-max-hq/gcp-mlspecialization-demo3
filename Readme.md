@@ -149,3 +149,6 @@ The code for retrieving the results of the model evaluation is in `gcp-mlspecial
 
 ### Conclusion
 The evaluation on the independent test dataset demonstrates the model's capability to accurately predict taxi fares, with the RMSE value indicating a reasonably low average error. This performance metric confirms the model's effectiveness in real-world applications, aligning with the project's business goals.
+
+
+Made with ❤️ by [datamax.ai](https://www.datamax.ai/).
